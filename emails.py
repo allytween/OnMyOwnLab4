@@ -79,7 +79,7 @@ url = "https://webexapis.com/v1/rooms"
 payload = "{\r\n    \"title\": \"Room For Emails\"\r\n}"
 headers = {
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer YjNmMGU3OTEtOTU4NS00ZTkxLTkwYzYtMGRmMmRhNTFlZTE1MmVmYjI1YjctM2Qy_PF84_7fe15fed-c67b-4ddc-b29c-39338b4d309e'
+  'Authorization': 'Bearer **'
 }
 response = requests.request("POST", url, headers=headers, data = payload)
 roomID = str(response.json()['id'])
@@ -94,7 +94,7 @@ url2 = "https://webexapis.com/v1/messages"
 payload2 = {"roomId": str(roomID), "text": addString}
 headers2 = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer YjNmMGU3OTEtOTU4NS00ZTkxLTkwYzYtMGRmMmRhNTFlZTE1MmVmYjI1YjctM2Qy_PF84_7fe15fed-c67b-4ddc-b29c-39338b4d309e'
+    'Authorization': 'Bearer **'
 }
 response2 = requests.request("POST", url2, headers=headers2, data = json.dumps(payload2))
 # debug print statement
